@@ -11,8 +11,8 @@ services:
       - TS_SERVE_CONFIG=/config/mealie.json
       - TS_STATE_DIR=/var/lib/tailscale
     volumes:
-      - ${PWD}/state:/var/lib/tailscale
-      - ${PWD}/config:/config
+      - /volume1/docker/ts-mealie/state:/var/lib/tailscale
+      - /volume1/docker/ts-mealie/config:/config
       - /dev/net/tun:/dev/net/tun
     cap_add:
       - net_admin
